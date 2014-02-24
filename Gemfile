@@ -18,6 +18,7 @@ gem 'capistrano-rvm'
 gem 'countries'
 gem 'country_select'
 gem 'factory_girl_rails' # Because we seed with it.
+gem 'faker'
 gem 'formtastic', github: 'justinfrench/formtastic', branch: '2.3-stable'
 gem 'jquery-rails'#, '~>2.1'
 gem 'jquery-ui-rails'#, '~>3.0'
@@ -51,7 +52,6 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'faker'
   gem 'minitest-reporters'
   gem 'shoulda', github: 'thoughtbot/shoulda'
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
