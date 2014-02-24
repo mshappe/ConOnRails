@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby '2.0.0'
 
 gem 'rails', '~>4.0'
 
@@ -16,6 +17,7 @@ gem 'capistrano-rails'#, '~>2.14'
 gem 'capistrano-rvm'
 gem 'countries'
 gem 'country_select'
+gem 'factory_girl_rails' # Because we seed with it.
 gem 'formtastic', github: 'justinfrench/formtastic', branch: '2.3-stable'
 gem 'jquery-rails'#, '~>2.1'
 gem 'jquery-ui-rails'#, '~>3.0'
@@ -44,7 +46,6 @@ gem 'unicorn'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
   #gem 'minitest'
 end
 
