@@ -5,14 +5,11 @@ gem 'rails', '~>4.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'pg'
 
-# Gems used only for assets and not required
-# in production environments by default.
-gem 'sass-rails'   #, "~> 3.2.3"
-gem 'coffee-rails' #, "~> 3.2.1"
-gem 'uglifier' #, ">= 1.0.3"
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 
 gem 'bcrypt-ruby'#, '~> 3.0.0'
 gem 'capistrano-rails'#, '~>2.14'
@@ -26,6 +23,7 @@ gem 'kaminari'#, '~>0.14'
 gem 'paper_trail', '>= 3.0.0.beta1'
 gem 'ransack'
 gem 'pg_search'
+gem 'rails_12factor', group: :production
 gem 'redcarpet'#, '~>2.2'
 #gem 'rvm1-capistrano3'#, '~>1.2'
 gem 'slim'

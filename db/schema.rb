@@ -11,10 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131118025035) do
+ActiveRecord::Schema.define(version: 20140224193905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attendee_dummies", force: true do |t|
+    t.integer "ATTENDEE_ID"
+    t.string  "FIRST_NAME"
+    t.string  "MIDDLE_NAME"
+    t.string  "LAST_NAME"
+    t.string  "COMMENTS"
+    t.string  "EMAIL"
+    t.string  "HOME_PHONE"
+    t.string  "WORK_PHONE"
+    t.string  "OTHER_PHONE"
+    t.string  "ADDRESS_LINE_1"
+    t.string  "ADDRESS_LINE_2"
+    t.string  "ADDRESS_LINE_3"
+    t.string  "ADDRESS_CITY"
+    t.string  "ADDRESS_STATE_CODE"
+    t.string  "ADDRESS_ZIP"
+    t.string  "FOREIGN_POSTAL_CODE"
+    t.string  "COUNTRY_CODE"
+    t.integer "BADGE_NUMBER"
+    t.string  "BADGE_NAME"
+  end
 
   create_table "audits", force: true do |t|
     t.integer  "auditable_id"
@@ -53,8 +75,8 @@ ActiveRecord::Schema.define(version: 20131118025035) do
     t.string   "name"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "departments", force: true do |t|
@@ -131,15 +153,15 @@ ActiveRecord::Schema.define(version: 20131118025035) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_active",       default: true
-    t.boolean  "comment"
-    t.boolean  "flagged"
-    t.boolean  "post_con"
-    t.boolean  "quote"
-    t.boolean  "sticky"
-    t.boolean  "emergency"
-    t.boolean  "medical"
-    t.boolean  "hidden"
-    t.boolean  "secure"
+    t.boolean  "comment",         default: false
+    t.boolean  "flagged",         default: false
+    t.boolean  "post_con",        default: false
+    t.boolean  "quote",           default: false
+    t.boolean  "sticky",          default: false
+    t.boolean  "emergency",       default: false
+    t.boolean  "medical",         default: false
+    t.boolean  "hidden",          default: false
+    t.boolean  "secure",          default: false
     t.boolean  "consuite"
     t.boolean  "hotel"
     t.boolean  "parties"
@@ -315,8 +337,8 @@ ActiveRecord::Schema.define(version: 20131118025035) do
     t.string   "name"
     t.boolean  "party"
     t.string   "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

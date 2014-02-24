@@ -24,9 +24,10 @@
 #
 
 class Attendee < ActiveRecord::Base
-  establish_connection :attendees
+#  establish_connection :attendees
 
-  self.table_name = "2012"
+#  self.table_name = "2012"
+  self.table_name = 'attendee_dummies'
   self.primary_key = "attendee_id"
 
   def name
